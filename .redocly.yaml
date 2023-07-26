@@ -1,10 +1,9 @@
 api:
   main: path/to/your-openapi.yaml
 lint:
-  rules:
-    example-rule-name: error
   test: path/to/another-openapi.yaml
   rules:
+    example-rule-name: error
     tag-description: off
     operation-summary: error
     no-unresolved-refs: error
