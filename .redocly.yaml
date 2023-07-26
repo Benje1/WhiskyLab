@@ -1,16 +1,22 @@
-api:
-  main: path/to/your-openapi.yaml
-lint:
-  test: path/to/another-openapi.yaml
-  rules:
-    example-rule-name: error
-    tag-description: off
-    operation-summary: error
-    no-unresolved-refs: error
-    no-unused-components: error
-    operation-2xx-response: error
-    operation-operationId: error
-    operation-singular-tag: error
-    no-enum-type-mismatch: error
-    no-identical-paths: error
-    no-ambiguous-paths: error
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  sample@v1: 
+    root: openapi/openapi.yaml
+extends:
+  - recommended
+rules:
+  no-unused-components: error
+theme:
+  openapi:
+    htmlTemplate: ./docs/index.html
+    theme:
+      colors:
+        primary:
+          main: "#32329f"
+    generateCodeSamples:
+      languages:  # Array of language config objects; indicates in which languages to generate code samples.
+        - lang: curl
+        - lang: Node.js
+        - lang: JavaScript
+        - lang: PHP
+        - lang: Python
