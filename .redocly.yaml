@@ -1,8 +1,8 @@
 api:
   main: path/to/your-openapi.yaml
 lint:
-  extends:
-    - recommended
+  rules:
+    example-rule-name: error
   test: path/to/another-openapi.yaml
   rules:
     tag-description: off
