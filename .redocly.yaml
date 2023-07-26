@@ -1,9 +1,6 @@
-apiDefinitions:
+api:
   main: path/to/your-openapi.yaml
   test: path/to/another-openapi.yaml
-lint:
-  extends:
-    - recommended
   rules:
     tag-description: off
     operation-summary: error
